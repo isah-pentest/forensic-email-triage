@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "schema_file": "/content/drive/MyDrive/forensic_email_project/rules/metadata_schema_v1.json",
+  "generated_files": [
+    "/content/drive/MyDrive/forensic_email_project/data/Enron_10000_metadata_v1.csv",
+    "/content/drive/MyDrive/forensic_email_project/data/Enron_50000_metadata_v1.csv",
+    "/content/drive/MyDrive/forensic_email_project/data/Enron_100000_metadata_v1.csv"
+  ],
+  "note": "Metadata features are structural/header-derived and exclude direct lexical weak-label triggers to reduce label leakage."
+}

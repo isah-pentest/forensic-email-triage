@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "purpose": "Lightweight forensic metadata for metadata-aware email triage",
+  "include_features": {
+    "header_structure": [
+      "is_internal_sender",
+      "is_external_sender",
+      "num_to_recipients",
+      "num_cc_recipients",
+      "num_bcc_recipients",
+      "has_cc",
+      "has_bcc",
+      "is_reply_subject",
+      "is_forward_subject",
+      "num_recipient_domains",
+      "is_internal_only_thread",
+      "is_mixed_domain_thread"
+    ],
+    "message_shape": [
+      "subject_char_len",
+      "body_char_len",
+      "subject_token_len",
+      "body_token_len",
+      "body_to_subject_len_ratio",
+      "has_empty_subject",
+      "has_short_body"
+    ],
+    "temporal": [
+      "hour_of_day",
+      "is_business_hours",
+      "day_of_week",
+      "is_weekend"
+    ],
+    "conservative_flags": [
+      "has_attachment_mention",
+      "has_multiple_recipients"
+    ]
+  },
+  "exclude_features_due_to_label_leakage": [
+    "urgency_keyword_count",
+    "phishing_keyword_count",
+    "url_presence_if_used_in_labeling",
+    "rule_trigger_counts",
+    "suspicious_lexical_flags_used_by_yaml"
+  ],
+  "design_note": "Primary metadata model uses structural/header-derived features only to avoid reproducing weak-label rules."
+}

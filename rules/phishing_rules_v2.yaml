@@ -1,0 +1,62 @@
+version: '2.0'
+description: Phishing-like heuristic rules for weak supervision labeling.
+thresholds:
+  phish_score_threshold: 3
+core_indicators:
+- verify your account
+- account verification
+- confirm your account
+- validate your identity
+- reset your password
+- password reset
+- update your account
+- security alert
+- unusual activity
+- account suspended
+- account locked
+- mailbox quota
+- your mailbox is full
+- unauthorized access
+- sign in
+- log in
+- login to
+urgency_indicators:
+- urgent
+- immediately
+- asap
+- act now
+- final notice
+- within 24 hours
+- within 48 hours
+- today
+- now
+action_indicators:
+- click here
+- follow this link
+- open the link
+- download the attachment
+- confirm your details
+- update your information
+regex_indicators:
+  url: http[s]?://|www\.
+  url_shorteners: \bbit\.ly\b|\btinyurl\.com\b|\bt\.co\b|\brebrand\.ly\b
+  email_in_body: '[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}'
+benign_context_indicators:
+- meeting
+- schedule
+- minutes
+- presentation
+- holiday party
+- project update
+- fyi
+- conference call
+- attached is the draft
+- invoice for approval
+- purchase order
+- contract review
+weights:
+  core: 2
+  urgency: 1
+  action: 1
+  url: 1
+  url_shortener: 1

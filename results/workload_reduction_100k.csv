@@ -1,0 +1,2 @@
+scale,model_family,variant,WR@10,WR@20,n_test,n_positive
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,0.9633507853403142,0.9790575916230366,10000,191

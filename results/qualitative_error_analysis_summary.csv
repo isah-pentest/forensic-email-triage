@@ -1,0 +1,10 @@
+case_type,likely_error_source,count
+false_negative,newsletter_or_automated_bulk_message,3
+false_negative,domain_specific_business_context,2
+false_negative,system_or_account_access_message,2
+false_negative,external_political_bulk_message,1
+false_negative,promotional_bulk_message,1
+false_negative,weak_label_or_context_missing,1
+false_positive,newsletter_or_automated_bulk_message,6
+false_positive,manual_review_required,2
+false_positive,system_or_account_access_message,2

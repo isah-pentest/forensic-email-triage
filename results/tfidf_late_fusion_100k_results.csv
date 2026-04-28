@@ -1,0 +1,2 @@
+scale,model_family,variant,macro_f1,class1_recall,class1_f1,pr_auc,roc_auc,n_metadata_features
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,0.7975066064636078,0.8743455497382199,0.6061705989110708,0.6259050357556584,0.98469244240384,21

@@ -1,0 +1,22 @@
+scale: Enron_10000
+seed: 42
+sizes:
+  train: 8000
+  val: 1000
+  test: 1000
+label_distribution_full:
+  0: 6733
+  1: 3080
+  2: 187
+label_distribution_train:
+  0: 5389
+  1: 2457
+  2: 154
+label_distribution_val:
+  0: 675
+  1: 307
+  2: 18
+label_distribution_test:
+  0: 669
+  1: 316
+  2: 15

@@ -1,0 +1,255 @@
+scale,model_family,variant,message_id,case_type,y_true,y_pred,score,subject,body_preview,manual_observation,likely_error_source,reviewer_note
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,954269aaab379c7410548c189fa390581faedfd3,false_positive,0,1,0.9984583274445666,RE: EOL Guest Account Access,"I've logged on. Thanks for your help.
+
+-----Original Message-----
+From: Danny.Lee@enron.com [mailto:Danny.Lee@enron.com]
+Sent: Thursday, July 27, 2000 5:07 PM
+To: ekrapels@esaibos.com
+Subject: EOL Guest Account Access
+
+
+
+Attention:          ESAI
+               Ed Krapels
+
+Thank you for your interest in EnronOnline.
+
+The  following  is a guest password that will allow you temporary view only
+access  to  EnronOnline.   Please  note,  the user ID and password are CASE
+SENSITIVE.
+
+     Guest User ID",Operational account/access notification.,system_or_account_access_message,Access-related terminology may resemble security-sensitive communication but content appears operational.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,feb10cb8935bdfde41e89cffab2e95cc5ec461c9,false_positive,0,1,0.998136577291572,"FW: INO.com Extreme Markets Daily Digest for May 11, 2000","---------------------- Forwarded by Chris Germany/HOU/ECT on 05/16/2000 12:35 
+PM ---------------------------
+
+
+""Germany Jr, Don (WD)"" <WDGERMANYJR@dow.com> on 05/15/2000 08:25:43 AM
+To: ""'Chris.Germany@enron.com'"" <Chris.Germany@enron.com>
+cc:  
+Subject: FW: INO.com Extreme Markets Daily Digest for May 11, 2000
+
+
+Check it out.
+
+-----Original Message-----
+From: INO.com [mailto:digest@ino.com]
+Sent: Thursday, May 11, 2000 11:57 PM
+To: wdgermanyjr@dow.com
+Subject: INO.com Extreme Markets Daily Dig",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,ee240d8cfdbff8a5ea4678da0aafee52e4ead35c,false_positive,0,1,0.9980513401751424,FW: March of Dimes," -----Original Message-----
+From:  Calcagno, Suzanne =20
+Sent: Thursday, April 19, 2001 1:12 PM
+To:=20
+Subject: March of Dimes
+
+Hello All--
+
+Shelley Corman has asked me to forward the attached letter to you regarding=
+=20
+Enron's fundraising efforts on behalf of the March of Dimes. =20
+
+Please take a moment to review--any contribution you can make would be=20
+greatly appreciated and will be matched 100% by Enron.
+
+Please ket me know if you have any questions or need any additional=20
+information",High-scoring false positive requiring manual confirmation.,manual_review_required,No automatic category confidently assigned.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,d2094629318f3b63cf1570cd69837a2e6b6b599f,false_positive,0,1,0.997220119154936,OSBA Report Online HTML Version Volume 74 Issue 43,"
+Goto Online Report Homepage></a> </td> </tr> <!--=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D END  TR SECTION 1 =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> <!--=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D BEGIN TR SECTION 2 =3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,38ca0217cb3acfd2b78ec1b96e57e75d3e66f6bd,false_positive,0,1,0.9968265024604486,"Enerfax Gas, Oil, Liquids,Derivatives' prices & info (text) Crude","
+Enerfax GOLD
+NORTH AMERICA'S FREE  GAS, OIL, LIQUIDS & DERIVATIVES
+INFORMATION SOURCE
+   Thursday, December 27 2001  No. 451
+Visit our website at: http://www.enerfaxgold.com/,
+
+PETROLEUM PRICES
+| Bonny Light      |   n/a
+| Brent            |   n/a
+| Butane           |  $ 0.37
+| Fuel Oil #2      |  $ 0.59
+| Louisiana        |  $21.45
+| Medit.           |   n/a
+| Propane Non-tet  |  $ 0.33
+| Propane Wet-tet  |  $ 0.33
+| W. Tx Int Cush   |  $21.28
+| W. Tx Sour       |  $19.65
+
+| Euro in US equiv |",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,4a1c0edbbb6c853f9ca08bb4d9db2198d0a9bb51,false_positive,0,1,0.9963763496207436,"Hot New Releases, Upcoming DVDs, and Advance Holiday Shopping in","=20
+Amazon.com Delivers Action DVD  [IMAGE] [IMAGE]   [IMAGE]  Action  DVD   [I=
+MAGE]  [IMAGE] Editor, Mark Englehart  [IMAGE] November  7, 2001       Sear=
+ch:   DVDVHSIn TheatersAll Products  Browse:  Action DVD All  genres:Action=
+  & AdventureAfrican  American CinemaAnime  & MangaArt  House & Internation=
+alClassicsComedyCult  MoviesDocumentaryDramaGay  & LesbianHorrorKids  & Fam=
+ilyMilitary  & WarMusicals  & Performing ArtsMusic  Video & ConcertsMystery=
+  & SuspenseScience  Fiction & Fan",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,91574fb1af86e0b3f4883b6beaa6787070729052,false_positive,0,1,0.9957125486615817,"Daren, claim your gift!","
+	[IMAGE][IMAGE]	
+  		
+   Dear Daren,  Click here now to redeem your Rose Blossom Bud Vase by Lenox!    [IMAGE]   [IMAGE]  [IMAGE]  [IMAGE]       		
+  		
+	 Shipping and handling charges apply.  Forgot your member name?  It is: Farmer Forgot your iWon password? Click here.    You received this email because when you registered at iWon you agreed to receive email from us. To unsubscribe from one or more email categories, please click below. Please note, changes may take up to one week to process. ",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,fa5ea3e983f0fc103456111da22fa4edd7ecdc9d,false_positive,0,1,0.9956217809710232,"CompleteCrafts.com Newsletter - November 1, 2001","CompleteCrafts.com Newsletter - November 1, 2001
+http://www.CompleteCrafts.com/
+
+_______________________________________________________ 
+Welcome to CompleteCrafts.com's newsletter! 
+
+Feel free to forward our newsletter to your friends. If you received our newsletter from a friend you can subscribe at http://www.CompleteCrafts.com/. If you do not wish to receive our newsletter in the future, please respond to this email with ""unsubscribe"" in the subject line. 
+___________________________________",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,58dcb04bdd51c8c455cad1c7e35eebf28c28dca9,false_positive,0,1,0.9955982649965096,Stars Attack Stars,"
+[IMAGE] =09[IMAGE]=09
+
+
+[IMAGE]=09
+
+
+     [IMAGE]NAUGHTY NICOLE IS GETTING NAUGHTIER  [IMAGE]Romance with bad-bo=
+y pop star heats up      [IMAGE]  [IMAGE] NICOLE KIDMAN   Nicole Kidman is =
+getting even with her ex-hubby Tom Cruise for flaunting his love affair wit=
+h Penelope Cruz - by cavorting with Brit pop bad-boy Robbie Williams!   Nic=
+ole and Robbie, 27 - who shot to stardom in the mid-1990s as part of the ba=
+nd Take That - first set tongues wagging this past September when they team=
+",High-scoring false positive requiring manual confirmation.,manual_review_required,No automatic category confidently assigned.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,41041e2d877e93025067b0f0dcdd00ccba0b65f8,false_positive,0,1,0.9955498950550252,Re: Add Authorized User,"We have responded to the message you recently sent to Citibank Customer
+Care. To get your response, sign on to Account Online
+(http://www.accountonline.com) and take the following steps: Go to
+Help/Contact Us, find the heading 'Send a Secure Message' and choose
+'View/Update Messages.'
+
+This email is generated automatically, and the address is not monitored
+for responses. If you try contacting us by using ""reply,"" you will not
+receive an answer. Additionally, it is not a secure environment. Use t",Operational account/access notification.,system_or_account_access_message,Access-related terminology may resemble security-sensitive communication but content appears operational.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,3b89c16185f562f72e6993ae5cad84b2674c4c54,false_negative,1,0,1.3769049676306473e-05,Jet Aircraft - Priced to sell,"
+Now is the best time in years  to purchase an aircraft!
+Pre-owned jet aircraft  prices are at historic lows.
+Now more than ever safety,  security, control . . .
+ 
+Omni offers the following aircraft  priced to sell!
+Full pictures, specifications and price are at:   WWW.OMNIJET.COM  
+ 
+Astra                            s/n  16
+Beechjet  400            s/n  RJ-7
+Beechjet  400A      s/n RK-126
+Beechjet  400A      s/n RK-136
+Citation  I/SP                 s/n 32
+Citation  II                    s/n  6",Promotional or commercial bulk message.,promotional_bulk_message,"High-confidence error likely caused by promotional formatting, external sender patterns, or bulk-message structure."
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,1733445674021bc5b2b58dd37b2dda711d0fdfa2,false_negative,1,0,4.1660560819693925e-05,FW: Credit worthiness - Alberta,"FYI.  Please let me know if this should be forwarded to someone in ENA Canada.  Thanks. 
+
+ -----Original Message-----
+From: 	Ibrahim, Amr  
+Sent:	Friday, November 02, 2001 4:47 PM
+To:	Steffes, James D.; Kingerski, Harry; Nicolay, Christi L.
+Cc:	Tiberi, Fino; Canovas, Guillermo; Levy, Alberto; Hemstock, Robert
+Subject:	Credit worthiness - Alberta
+
+
+
+Please find below the creditworthiness criteria for Alberta Pool.  I appreciate the help of Fino and Guillermo.
+  
+
+The credit worthiness in Alberta ",Business-operational communication with domain-specific terminology.,domain_specific_business_context,Model likely missed or over-weighted specialized business context not well represented in sparse text features.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,eb98ee08771c863157682afe86ed5557741e60b5,false_negative,1,0,4.6575494617411855e-05,Important News from Chapters.ca,"
+
+  [IMAGE] [IMAGE] [IMAGE]      Dear john lavorato :  As a valued customer o=
+f chapters.ca, we feel it's important to let you know about a significant c=
+hange we will be implementing next week. As we prepare to merge Indigo and =
+Chapters, we are combining the operations of both sites into chapters.indig=
+o.ca. This new site will blend the best of chapters.ca and indigo.ca to cre=
+ate the most efficient, engaging and entertaining online retail site for bo=
+oks, music, movies, gifts, garden pr",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,5c69ee296a8fb8cfab1166416da5188579eeb982,false_negative,1,0,5.13469239362005e-05,Florida Recount Update,"From: Don Evans, Chairman, Bush-Cheney Campaign
+
+This is an urgent message to supporters of Governor George W. Bush and 
+Secretary Dick Cheney regarding the situation in Florida.
+
+It is now clear we must raise money to fund the recount effort in Florida.  
+Governor Bush won the vote on Election Day, a victory confirmed by a 
+recount.  Now, the other side is seeking yet a third count by hand.  There is 
+a reason why ballots are counted by computer and not by hand.
+
+The expense of the recount effo",Political or campaign-related bulk communication.,external_political_bulk_message,Weak-labeling or classifier signal may treat external mass communication as suspicious despite non-forensic routine content.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,60a6e538fdb8b99558c9e94e440505ce149b906d,false_negative,1,0,6.779283897955501e-05,FW: CSUF Detailed Study,"Jeff 
+
+Again, here is PG&E trying to shoe horn us on this tap vs. bus connection 
+issue.  If you are not familiar with this issue, EES elected to utilize the 
+single tap termination @ the PG&E Bullard Substation in our proposal to 
+CSUF.  This single tap option was provided to us by PG&E in their 
+Informational Review.  PG&E itemized this cost in the Informational Review at 
+$178,000 and this the figure we used.  
+
+During past meetings, PG&E has stated that this tap option is no loger 
+availabel",Business-operational communication with domain-specific terminology.,domain_specific_business_context,Model likely missed or over-weighted specialized business context not well represented in sparse text features.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,94867fc18d0151e72b1e5a5b0d2c65ec30bc0b6e,false_negative,1,0,8.870704153039656e-05,Trader Log In,"Kam,
+
+As we discussed this morning, the traders will be using their physical books to log onto EOL with the exception of the financial desk (John Arnold and team).  Behind the scenes, EOL will  set these traders up in the Counterparty Alternates table to have the books ""flip"" to the respective financial book when a financial trade is hit.  
+
+Also, any word yet on the traders wanting a different book for price, basis and index.  We are still under the assumption that the trades will book under on",Operational account/access notification.,system_or_account_access_message,Access-related terminology may resemble security-sensitive communication but content appears operational.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,b70193246d6d6b5af8f88ba0c72d2eb3d4c7ecc5,false_negative,1,0,0.0001131152396621,Sitara Reports New URL,"
+
+ -----Original Message-----
+From: 	Lattupally, Krishna  
+Sent:	Wednesday, February 06, 2002 9:47 AM
+To:	Elledge, Susan; Theriot, Kim S.; Anderson, Bridgette; Campos, Sylvia A.
+Cc:	Krishnaswamy, Jayant; Severson, Russ
+Subject:	RE: Sitara access and Sitara Reports
+
+all,
+Please use new URL for NETCO Sitara Reporting Production system.
+ http://sitrpt.netco.enron.com
+
+Russ -- Can you please let all the NETCO users know the new URL.
+
+Thanks
+Krishna
+
+
+
+
+
+ -----Original Message-----
+From: 	Krishnaswam",Operational account/access notification.,system_or_account_access_message,Access-related terminology may resemble security-sensitive communication but content appears operational.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,f4da5edbc9004887dd08aabb80e7aa4560c46fc3,false_negative,1,0,0.0003943792151254,melange: M-W's Word of the Day,"***************************************************************
+Did you know Julius Caesar moved January to the head
+of the year? Click here for your guide to word histories.
+http://www.m-w.com/book/literead/wordhist.htm
+***************************************************************
+
+The Word of the Day for January 7 is:
+
+melange   \may-LAHNZH or may-LAHNJ\   (noun)
+     : a mixture often of incongruous elements
+
+Example sentence:
+     Critics panned the new film as an awkward melange of heavy
+",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,817af5152ab5ff8c524c7b3da2c1458f940480f4,false_negative,1,0,0.0005911364401215,EnTouch Newsletter,"
+ 
+
+BUSINESS HIGHLIGHTS
+
+West Power
+On August 31, 2001, West Power Origination closed the sale of 100% of the membership interests in Southwest Power to Black Hills Energy Corp.  The sale to Black Hills concluded a two year strategy associated with the acquisition and expansion of the 50MW Las Vegas Cogeneration facility.   The 230MW Las Vegas II expansion project initiated in January 2000 consists of two, 2x1 systems utilizing LM 6000 PC technology in combined cycle. In May of this year, West P",Routine newsletter/digest or automated external information feed.,newsletter_or_automated_bulk_message,Model likely weighted bulk/external-message structure as suspicious although content appears routine.
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,d60b1af025bf84c46af84275c9d35d72ba537ef9,false_negative,1,0,0.0023603214279275,FW: Tribute to America,"
+Regards,
+Amy Brock
+HBD Marketing Team
+Office: 281-988-2157
+Cell:  713-702-6815
+
+
+
+-----Original Message-----
+From:	Rex Waller
+Sent:	Wednesday, September 12,2001 5:49 PM
+To:	Alfred Webb; Allen Hadaway; Allison Boren; Amy Brock; Barry Willis;
+Bart Boren; Bill Boykin; Bill Cooper; Billie Cagle; Billy Lee; bob maughmen;
+Bob Schuman; Bonita Johnson; Chad Wing; cheryl; Connie Stuckey; corby
+goodman; craig Gardner; Dale Miller; Dan Crawford; Dan Michael; Darryl
+Fuller; David Attaway; David Tucker; Deb",Positive weak-label case with limited or context-dependent lexical evidence.,weak_label_or_context_missing,Likely requires thread-level or metadata-level context beyond the available message preview.

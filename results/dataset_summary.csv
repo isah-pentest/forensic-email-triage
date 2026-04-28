@@ -1,0 +1,4 @@
+scale,n_rows,class0_internal,class1_external,class2_suspicious,binary_positive_rate
+Enron_10000,10000,6733,3080,187,0.0187
+Enron_50000,50000,33928,15183,889,0.01778
+Enron_100000,100000,67990,30278,1732,0.01732
