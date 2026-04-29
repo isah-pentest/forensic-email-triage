@@ -2,7 +2,8 @@
 
 This repository contains the reproducibility artifacts for the paper:
 
-> *Scaling Weakly Supervised Forensic Email Triage: Reproducible Weak-Label Evidence Modeling with Text and Metadata*
+> *Weakly Supervised Forensic Email Triage: Scale,
+Metadata Fusion, and Reproducible Evaluation*
 
 ---
 
