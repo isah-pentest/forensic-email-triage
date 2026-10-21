@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite the paper and this release."
+title: "forensic-email-triage: code and released results for 'Evaluating Weakly Supervised Forensic Email Triage'"
+type: software
+authors:
+  - family-names: Mohammed
+    given-names: Isah Alhaji
+    affiliation: Sam Houston State University
+  - family-names: Yahaya
+    given-names: Ayodeji
+    affiliation: Sam Houston State University
+  - family-names: Aigboduwa
+    given-names: Daniel
+    affiliation: Sam Houston State University
+  - family-names: Pham
+    given-names: Van Vung
+    affiliation: Sam Houston State University
+repository-code: "https://github.com/isah-pentest/forensic-email-triage"
+version: isdfs2027-v1

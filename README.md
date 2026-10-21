@@ -98,6 +98,16 @@ python -m analysis.table2_main_results --v2 /path/to/frozen_release_v2
 
 `REPRODUCE.md` covers rebuilding the Enron subsets and re-running the v2 experiments.
 
+## Citing this release
+
+The paper cites the tag `isdfs2027-v1`. The tag points to a fixed commit, so the code, saved results and split identifiers described in the paper are exactly the files in that commit.
+
+- **Browse:** <https://github.com/isah-pentest/forensic-email-triage/tree/isdfs2027-v1>
+- **Clone and check out:** `git clone https://github.com/isah-pentest/forensic-email-triage.git && cd forensic-email-triage && git checkout isdfs2027-v1`
+- **Verify:** run `python -m analysis.run_all`, then `python -m analysis.verify_manifest`. The second command compares the SHA-256 of every input file and every generated figure and table with `outputs/MANIFEST.sha256`.
+
+`CITATION.cff` gives the citation metadata.
+
 ## Contact
 
 Isah Alhaji Mohammed, Sam Houston State University.
