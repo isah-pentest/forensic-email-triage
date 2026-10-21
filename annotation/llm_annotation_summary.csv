@@ -1,0 +1,9 @@
+quantity,estimate,ci_low,ci_high
+cohen_kappa_review_worthy,0.554,0.138,0.848
+raw_agreement,0.9655172413793104,,
+p_review_worthy_given_weak_pos_either,0.08,0.023,0.156
+p_review_worthy_given_weak_pos_both,0.04,0.0,0.098
+p_review_worthy_given_model_flag_either,0.08,0.031,0.139
+p_review_worthy_given_model_flag_both,0.029,0.0,0.068
+tn_stratum_review_worthy_count_of_50,0.0,,
+tn_stratum_upper_bound_97.5_clopper_pearson,0.0711,,
