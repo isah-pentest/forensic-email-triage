@@ -1,7 +1,8 @@
 """Figure 2: recall of weak-label positives versus review budget (100k test set, text-only models).
 
 Source: frozen_release_v2/predictions/Enron_100000_{tfidf,distilbert}_text_test_predictions.csv.
-Shaded bands: 95% percentile bootstrap intervals (1,000 test resamples, seed 42).
+Shaded bands: 95% percentile bootstrap intervals (1,000 test resamples, seed 42). At very small budgets the
+upper band can exceed the oracle line, because each resample has its own prevalence (its own oracle).
 """
 import numpy as np, pandas as pd
 from analysis import common as C
@@ -33,7 +34,9 @@ def make(show=False, kmax=15.0):
     ax.set_xticklabels(["0", f"{prev:.1f}"] + [f"{t:g}" for t in np.arange(5, kmax + 1e-9, 5)])
     ax.set_xlabel("Review budget $k$ (% of ranked test messages)")
     ax.set_ylabel("WR@$k$ (share of weak positives)")
-    ax.grid(True); ax.legend(loc="lower right", frameon=True, framealpha=0.9, edgecolor="none")
+    ax.grid(True)
+    # legend in the empty region right of the curves and above the random line
+    ax.legend(loc="center right", bbox_to_anchor=(1.0, 0.45), frameon=True, framealpha=0.9, edgecolor="none")
     path = C.save_figure(fig, "fig2_review_budget")
     if show: plt.show()
     else: plt.close(fig)

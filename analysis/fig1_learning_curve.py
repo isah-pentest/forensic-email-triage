@@ -25,7 +25,7 @@ def make(show=False):
     lo = min((agg[(c, "mean")] - agg[(c, "std")]).min() for c in ["macro_f1", "pos_recall", "pr_auc"])
     hi = max((agg[(c, "mean")] + agg[(c, "std")]).max() for c in ["macro_f1", "pos_recall", "pr_auc"])
     ax.set_ylim(np.floor(lo * 20) / 20 - 0.05, np.ceil(hi * 20) / 20 + 0.05)
-    ax.set_xlabel("Training messages (nested subsets of the 100k training split)")
+    ax.set_xlabel("Training messages, log scale (nested subsets of the 100k training split)")
     ax.set_ylabel("Score (fixed 100k test set)")
     ax.grid(True); ax.legend(ncol=3, loc="lower center", bbox_to_anchor=(0.5, 1.0), frameon=False)
     path = C.save_figure(fig, "fig1_learning_curve")

@@ -20,7 +20,7 @@ Each figure and table has its own script in `analysis/`. The scripts:
 
 **Pointing at another copy of the saved results.** Use `--v2 <folder>`, `make figures V2=<folder>`, or the environment variable `FET_V2`, e.g. to read the copy on Google Drive.
 
-Bootstraps use `numpy.random.default_rng(42)`, so results are identical on every run.
+Bootstraps use `numpy.random.default_rng(42)`, and figures are saved with fixed metadata, so outputs are byte-identical on every run. `outputs/MANIFEST.sha256` records the SHA-256 of all inputs and outputs. `python -m analysis.verify_manifest` checks them.
 
 **LLM annotation results.** `make annotations` recomputes them and writes `annotation/llm_annotation_summary.csv`.
 

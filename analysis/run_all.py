@@ -9,3 +9,4 @@ if __name__ == "__main__":
         print("wrote", mod.make())
     for mod in [table1_splits, table2_main_results, table3_late_fusion, table4_review_budget]:
         mod.make(); print("wrote", mod.__name__.split(".")[-1])
+    print("wrote", C.write_manifest(), "(verify with: python -m analysis.verify_manifest)")

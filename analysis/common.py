@@ -84,8 +84,10 @@ def use_paper_style():
         "pdf.fonttype": 42, "ps.fonttype": 42, "savefig.bbox": "tight", "savefig.pad_inches": 0.02})
 
 def save_figure(fig, name):
+    """Save as PDF and 300-dpi PNG with fixed metadata, so identical inputs give byte-identical files."""
     d = out_dir()
-    fig.savefig(d / f"{name}.pdf"); fig.savefig(d / f"{name}.png", dpi=300)
+    fig.savefig(d / f"{name}.pdf", metadata={"CreationDate": None, "ModDate": None, "Producer": "matplotlib", "Creator": f"analysis/{name}.py"})
+    fig.savefig(d / f"{name}.png", dpi=300, metadata={"Software": f"analysis/{name}.py"})
     return d / f"{name}.pdf"
 
 def save_table(df, name, latex_rows, sources):
@@ -96,6 +98,33 @@ def save_table(df, name, latex_rows, sources):
     hdr += "".join(f"%% source: {s}\n" for s in sources)
     (d / f"{name}_rows.tex").write_text(hdr + "\n".join(latex_rows) + "\n")
     return d / f"{name}.csv"
+
+# ------------------------------------------------------------------ integrity
+INPUTS = [  # every saved-result file read by the figure/table scripts (relative to their folder)
+    ("splits", "Enron_10000/split_meta.yaml"), ("splits", "Enron_50000/split_meta.yaml"), ("splits", "Enron_100000/split_meta.yaml"),
+    ("v2", "results/E2_bootstrap_ci_all.csv"), ("v2", "results/E3_nested_learning_curve_tfidf.csv"), ("v2", "results/E4_clean_stacking.csv"),
+    ("v1", "tfidf_late_fusion_100k_predictions.csv"), ("v1", "cross_domain_trec07_eval.csv"), ("v1", "cross_domain_trec07_predictions.csv"),
+] + [("v2", f"predictions/{s}_{c}_test_predictions.csv") for s in SCALES
+     for c in ["tfidf_text", "distilbert_text", "meta_only", "early_fusion"]] + \
+    [("v2", f"predictions/Enron_100000_{c}_test_predictions.csv") for c in
+     ["tfidf_oof_nosw_score_only", "tfidf_oof_nosw_score+safe21", "tfidf_oof_nosw_score+meta25",
+      "distilbert_valstack_score_only", "distilbert_valstack_score+meta25"]]
+
+def sha256(path):
+    import hashlib
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""): h.update(chunk)
+    return h.hexdigest()
+
+def write_manifest():
+    """SHA-256 of every input read and every output written (sha256sum format), for integrity checks."""
+    p, d = paths(), out_dir()
+    lines = [f"{sha256(p[root] / rel)}  {root}:{rel}" for root, rel in INPUTS]
+    lines += [f"{sha256(f)}  outputs:{f.name}" for f in sorted(d.iterdir())
+              if f.is_file() and f.name != "MANIFEST.sha256"]
+    (d / "MANIFEST.sha256").write_text("\n".join(lines) + "\n")
+    return d / "MANIFEST.sha256"
 
 f3 = lambda x: f"{x:.3f}"
 def ci_text(r): return f"{f3(r.point)} [{f3(r.ci_low)}, {f3(r.ci_high)}]"

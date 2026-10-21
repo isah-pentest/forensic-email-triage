@@ -92,6 +92,8 @@ python -m analysis.table2_main_results --v2 /path/to/frozen_release_v2
 
 **Table output.** Each table is written as CSV and as LaTeX rows (`*_rows.tex`) for the paper. The first lines of each `*_rows.tex` file name its source files.
 
+**Integrity.** `run_all` writes `outputs/MANIFEST.sha256`: the SHA-256 of every saved-result file read and every figure and table written. Outputs are byte-identical across runs. `python -m analysis.verify_manifest` re-hashes everything and fails on any mismatch.
+
 `REPRODUCE.md` covers rebuilding the Enron subsets and re-running the v2 experiments.
 
 ## Contact
