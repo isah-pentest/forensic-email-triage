@@ -26,7 +26,7 @@ They are a **preliminary relevance signal**. They are **not** human validation a
 
 ## Results
 
-Produced by `analyze_annotations.py` and summarised in `llm_annotation_summary.csv`.
+Computed by `analyze_annotations.py` (seed 42, 2,000 bootstrap resamples), which writes `llm_annotation_summary.csv`. Run it with `make annotations`.
 
 **Agreement between the two models**
 - They agreed on 168 of 174 messages.
@@ -40,8 +40,8 @@ A message counts under **either** if at least one model marked it review-worthy,
 
 | Group | Either model | Both models |
 |---|---|---|
-| Weak-label positives | 8.0% (95% CI 2.3–15.6) | 4.0% (0.0–9.8) |
-| Messages the model flagged | 8.0% (3.1–13.9) | 2.9% (0.0–6.8) |
+| Weak-label positives | 8.0% (95% CI 2.1–15.6) | 4.0% (0.0–9.3) |
+| Messages the model flagged | 8.0% (2.9–13.6) | 2.9% (0.0–6.8) |
 
 **What these annotations cannot tell us.** 0 of the 50 TN messages were marked review-worthy. The one-sided 97.5% upper bound on that rate is 7.1%, so the sample cannot bound what the rules miss.
 

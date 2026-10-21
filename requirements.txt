@@ -1,0 +1,9 @@
+# Level 1 (paper from released artifacts); tested with these versions
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.5
+scipy>=1.13
+PyYAML>=6.0
+matplotlib>=3.7
+# Level 2 (re-running v2 from raw data) additionally used scikit-learn 1.6.1 in Colab,
+# and transformers/torch for DistilBERT inference.

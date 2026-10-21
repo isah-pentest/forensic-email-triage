@@ -25,3 +25,6 @@ data/*.csv
 !manifests/*.json
 !splits/**/*.csv
 !splits/**/*.yaml
+
+# Created by analysis/ scripts (not tracked: always rebuilt from the saved results)
+outputs/

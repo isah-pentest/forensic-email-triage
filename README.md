@@ -16,6 +16,7 @@ The models read the same text the rules were applied to. The results therefore m
 | `frozen_release_v2/` | Re-runs with per-message test predictions for **every** configuration, bootstrap CIs, paired comparisons, and validity checks | Used by the paper |
 | `annotation/` | Blinded 174-message relevance sample, annotation guide, key, and the **LLM-assisted** annotations | Human validation still pending |
 | `code/` | `limitations_upgrade.py` (Colab, produces v2) plus independent verification scripts | |
+| `analysis/` | One script per figure and table (`fig1_learning_curve.py`, `fig2_review_budget.py`, `table1_splits.py` … `table4_review_budget.py`), reading the saved results; outputs go to `outputs/` (not tracked) | Colab: `notebooks/reproduce_figures_tables.ipynb` |
 | `notebooks/` | The original notebook with the credential cell removed | See the notebook caveat below |
 
 **Notebook caveat.** Cells are stored roughly newest-first. Two definition cells were never saved: `make_training_args`, and the cell defining `train_text_prob`.
@@ -66,13 +67,32 @@ The v1 README and earlier manuscript drafts stated the following. They are super
 - *"Human review simulation supports qualitative validation."* The v1 sample had no annotations. v2 adds LLM-assisted annotations only.
 - The DistilBERT early-fusion results and the TF-IDF late-fusion results at 10k and 50k that appeared in an earlier draft have no supporting code or output.
 
-## Reproducing v2
+## Reproducing the paper's figures and tables
 
-1. In Colab, mount Google Drive.
-2. Run `code/limitations_upgrade.py` cell by cell, with the original project folder in place.
-   - It reads v1 read-only and writes `frozen_release_v2/`.
-   - Seed: 42. Bootstrap resamples: 1,000.
-3. To verify the outputs, run `python code/verify_v2.py frozen_release_v2 .`. It recomputes every metric from the prediction files.
+**In Colab.** Open `notebooks/reproduce_figures_tables.ipynb`. It clones the repository, then runs one cell per figure and table. Figures display inline, and tables display as data frames. Set `USE_DRIVE = True` to read the saved results from Google Drive instead of the repository copy.
+
+**From the command line.**
+
+```bash
+python -m analysis.run_all                     # everything, into outputs/
+python -m analysis.fig2_review_budget          # a single figure
+python -m analysis.table2_main_results --v2 /path/to/frozen_release_v2
+```
+
+**Scripts and sources.**
+
+| Script | Output | Reads |
+|---|---|---|
+| `fig1_learning_curve.py` | Figure 1 (PDF + PNG) | `E3_nested_learning_curve_tfidf.csv` |
+| `fig2_review_budget.py` | Figure 2 (PDF + PNG) | 100k text-model prediction files (bootstrap, seed 42) |
+| `table1_splits.py` | Table I | `splits/*/split_meta.yaml` |
+| `table2_main_results.py` | Table II | `E2_bootstrap_ci_all.csv`, prediction files |
+| `table3_late_fusion.py` | Table III | `E4_clean_stacking.csv`, 100k predictions, superseded run |
+| `table4_review_budget.py` | Table IV | 100k predictions, `E2`, TREC07 results |
+
+**Table output.** Each table is written as CSV and as LaTeX rows (`*_rows.tex`) for the paper. The first lines of each `*_rows.tex` file name its source files.
+
+`REPRODUCE.md` covers rebuilding the Enron subsets and re-running the v2 experiments.
 
 ## Contact
 

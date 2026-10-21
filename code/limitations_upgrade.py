@@ -184,7 +184,7 @@ V1_RESULTS = {
 
 def distilbert_scores(scale, split, df_split):
     """Use saved v1 DistilBERT scores if present; otherwise run inference with the saved model."""
-    for base in [V1 / "data", ROOT / "data"]:
+    for base in [V1 / "data", ROOT / "data", Path(os.environ.get("FET_REPO", ".")) / "frozen_release_v2" / "distilbert_scores"]:
         p = base / f"{scale}_distil_scores_{split}.csv"
         if p.exists():
             s = pd.read_csv(p)
