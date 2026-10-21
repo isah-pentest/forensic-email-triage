@@ -1,0 +1,18 @@
+
+Final manuscript experiment package
+
+Baselines
+- TFIDF + LogisticRegression (text only)
+- Weighted DistilBERT (text only)
+
+Metadata extensions
+- Metadata-only LogisticRegression
+- TFIDF + metadata fusion
+- DistilBERT late fusion with metadata
+
+Experimental controls
+- Fixed weak-labeling rules
+- Fixed dataset scales: 10k / 50k / 100k
+- Fixed split IDs
+- Fixed seed: 42
+- Same evaluation metrics across all variants

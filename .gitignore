@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets
+kaggle.json
+.env
+wandb/
+
+# Large models
+models/
+*.pkl
+*.pt
+*.bin
+*.safetensors
+
+# Raw datasets
+data/*.csv
+
+# Keep only reproducibility artifacts
+!results/*.csv
+!rules/*.yaml
+!rules/*.json
+!manifests/*.json
+!splits/**/*.csv
+!splits/**/*.yaml
+
+# Created by analysis/ scripts (not tracked: always rebuilt from the saved results)
+outputs/

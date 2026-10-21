@@ -1,0 +1,2 @@
+train_domain,test_domain,model_family,variant,n_test,positive_label,macro_f1,positive_recall,positive_f1,pr_auc,roc_auc,interpretation,macro_f1_ci_low,macro_f1_ci_high,n_bootstrap,seed
+Enron weak-label email,TREC07 preprocessed spam/ham email,TFIDF_LR,text_only_external_rebuilt,73906,spam,0.3120880227955701,0.09627266075928786,0.16350551403965966,0.6392739015118242,0.48498964415445145,External email-domain abuse stress test; not forensic ground truth.,0.3090918603331282,0.31518021675223956,1000,42

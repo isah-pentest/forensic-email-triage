@@ -1,0 +1,2 @@
+scale,model_family,variant,macro_f1,macro_f1_ci_low,macro_f1_ci_high,n_bootstrap,seed
+Enron_100000,TFIDF_LR,late_fusion_safe_metadata,0.7975066064636078,0.7727163872683869,0.8199031458915259,1000,42
