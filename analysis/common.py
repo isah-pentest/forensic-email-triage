@@ -104,7 +104,14 @@ INPUTS = [  # every saved-result file read by the figure/table scripts (relative
     ("splits", "Enron_10000/split_meta.yaml"), ("splits", "Enron_50000/split_meta.yaml"), ("splits", "Enron_100000/split_meta.yaml"),
     ("v2", "results/E2_bootstrap_ci_all.csv"), ("v2", "results/E3_nested_learning_curve_tfidf.csv"), ("v2", "results/E4_clean_stacking.csv"),
     ("v1", "tfidf_late_fusion_100k_predictions.csv"), ("v1", "cross_domain_trec07_eval.csv"), ("v1", "cross_domain_trec07_predictions.csv"),
-] + [("v2", f"predictions/{s}_{c}_test_predictions.csv") for s in SCALES
+    # saved results quoted directly in the paper's text
+    ("v1", "rule_trigger_distribution_100k.csv"), ("v1", "rule_triggers_100k.csv"),
+    ("v2", "results/E1_reproduction_check.csv"), ("v2", "results/E2_paired_bootstrap_differences.csv"),
+    ("v2", "results/E3_split_seed_variability_tfidf.csv"), ("v2", "results/E4_paired_differences_Enron_100000.csv"),
+    ("v2", "results/E5_duplicate_audit.csv"), ("v2", "results/E5_grouped_split_tfidf_100k.csv"),
+    ("v2", "results/E6_rule_word_boundary_sensitivity.csv"), ("v2", "results/E7_rule_masking_probe_tfidf.csv"),
+    ("v2", "results/E8_truncation_analysis.csv"),
+] + [("splits", f"{s}/{p}_ids.csv") for s in SCALES for p in ["train", "val", "test"]] + [("v2", f"predictions/{s}_{c}_test_predictions.csv") for s in SCALES
      for c in ["tfidf_text", "distilbert_text", "meta_only", "early_fusion"]] + \
     [("v2", f"predictions/Enron_100000_{c}_test_predictions.csv") for c in
      ["tfidf_oof_nosw_score_only", "tfidf_oof_nosw_score+safe21", "tfidf_oof_nosw_score+meta25",
@@ -121,6 +128,10 @@ def write_manifest():
     """SHA-256 of every input read and every output written (sha256sum format), for integrity checks."""
     p, d = paths(), out_dir()
     lines = [f"{sha256(p[root] / rel)}  {root}:{rel}" for root, rel in INPUTS]
+    ann = REPO / "annotation"   # LLM-assisted annotation inputs and summary quoted in the paper
+    lines += [f"{sha256(ann / rel)}  annotation:{rel}" for rel in
+              ["annotation_key.csv", "llm_annotations/llm_sheet1_completed.csv",
+               "llm_annotations/llm_sheet2_completed.csv", "llm_annotation_summary.csv"]]
     lines += [f"{sha256(f)}  outputs:{f.name}" for f in sorted(d.iterdir())
               if f.is_file() and f.name != "MANIFEST.sha256"]
     (d / "MANIFEST.sha256").write_text("\n".join(lines) + "\n")

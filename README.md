@@ -88,7 +88,9 @@ python -m analysis.table2_main_results --v2 /path/to/frozen_release_v2
 | `table1_splits.py` | Table I | `splits/*/split_meta.yaml` |
 | `table2_main_results.py` | Table II | `E2_bootstrap_ci_all.csv`, prediction files |
 | `table3_late_fusion.py` | Table III | `E4_clean_stacking.csv`, 100k predictions, superseded run |
-| `table4_review_budget.py` | Table IV | 100k predictions, `E2`, TREC07 results |
+| `table4_review_budget.py` | Table IV | 100k predictions, `E2` |
+| `table5_trec07.py` | Table V | TREC07 results |
+| `derived_statistics.py` | In-text statistics not stored in a saved file (equal-volume macro F1, two paired differences, truncation counts) | 100k predictions, superseded run, `E8` |
 
 **Table output.** Each table is written as CSV and as LaTeX rows (`*_rows.tex`) for the paper. The first lines of each `*_rows.tex` file name its source files.
 

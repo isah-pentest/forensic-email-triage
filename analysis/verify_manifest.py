@@ -13,7 +13,8 @@ if __name__ == "__main__":
     bad = 0
     for line in man.read_text().splitlines():
         digest, ref = line.split("  ", 1); root, rel = ref.split(":", 1)
-        path = (p["out"] if root == "outputs" else p[root]) / rel
+        base = {"outputs": p["out"], "annotation": C.REPO / "annotation"}.get(root) or p[root]
+        path = base / rel
         ok = path.exists() and C.sha256(path) == digest
         bad += not ok
         if not ok: print("MISMATCH", ref)
